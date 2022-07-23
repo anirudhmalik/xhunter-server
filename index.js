@@ -42,6 +42,7 @@ io.on('connection', (socket) => {
       socket.on("previewImage", (fileData) =>response("previewImage",data));
       socket.on("error", (data) =>response("error",data));
       socket.on("getSMS", (data) =>response("getSMS",data));
+      socket.on('getLocation',(data)=>response("getLocation",data));
      
       socket.on('disconnect', () => {
         if(socket.id===adminSocketId){
